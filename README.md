@@ -43,7 +43,7 @@ It targets four readers:
 | Status | Project | What it is |
 |:---:|---|---|
 | ⚪ | `nexus-cli` | .NET 10 Native AOT CLI — single binary, controls the entire VM/Swarm/Nomad fleet |
-| ⚪ | `local-data-stack` | Docker Compose + Packer + Terraform for the full cluster stack |
+| 🟢 | [`local-data-stack`](https://github.com/grezap/local-data-stack) | Reproducible single-host Compose stack (Kafka KRaft, ClickHouse, Redis, OTel, Prometheus, Grafana, Jaeger, Seq). [v0.1.0 released](https://github.com/grezap/local-data-stack/releases/tag/v0.1.0). |
 
 ### Application projects
 
