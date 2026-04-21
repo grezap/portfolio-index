@@ -8,15 +8,21 @@
   <a href="https://github.com/grezap">👤 GitHub Profile</a> &nbsp;·&nbsp;
   <!-- <a href="https://gregzapantis.dev">🌐 Website</a> &nbsp;·&nbsp; -->
   <a href="https://www.linkedin.com/in/grigoris-zapantis-1a0638b/">💼 LinkedIn</a> &nbsp;·&nbsp;
-  <a href="./PORTFOLIO.md">📊 Skills matrix</a>
+  <a href="./PORTFOLIO.md">📊 Skills matrix</a> &nbsp;·&nbsp;
+  <a href="https://github.com/grezap/nexus-platform-plan">🗺️ Master plan (nexus-platform-plan)</a>
 </p>
 
 ---
 
+> **📘 Canonical blueprint:** The complete end-to-end plan — 14 app projects, 5 infrastructure
+> repos, 30 enhancements, 12 build phases, 65-VM lab topology, 14 demo playbooks, and all
+> per-project schema designs — lives in **[`nexus-platform-plan`](https://github.com/grezap/nexus-platform-plan)**
+> (v0.1.0 Plan published). Start there for the architectural source of truth.
+
 ## What is NexusPlatform?
 
-NexusPlatform is a collection of **13 production-grade .NET application projects**,
-**2 infrastructure repositories**, and a **4-app native Windows suite**, engineered as
+NexusPlatform is a collection of **14 production-grade .NET application projects**,
+**5 infrastructure repositories**, and a **4-app native Windows suite**, engineered as
 a single coherent portfolio. Every project is built to senior-engineering standards:
 correct architectural patterns, HA-capable infrastructure, full observability,
 automated tests, and documented runbooks.
@@ -43,6 +49,11 @@ It targets four readers:
 | Status | Project | What it is |
 |:---:|---|---|
 | ⚪ | `nexus-cli` | .NET 10 Native AOT CLI — single binary, controls the entire VM/Swarm/Nomad fleet |
+| ⚪ | `nexus-shared` | Shared .NET 10 libraries — OTel bootstrap, Vault client, Problem Details, Outbox helpers, auth primitives |
+| ⚪ | `nexus-infra-vmware` | Packer templates + Terraform (vmware-desktop provider) for the 65-VM lab — Debian 13, Ubuntu 24.04, Windows Server 2025, Windows 11 Enterprise |
+| ⚪ | `nexus-infra-swarm-nomad` | Tier-2 orchestration — Docker Swarm (3+3) + Nomad + Consul + Vault with mTLS via Consul Connect |
+| ⚪ | `nexus-infra-k8s` | Tier-3 orchestration — kubeadm HA control plane, Cilium CNI, cert-manager, Argo CD, Kyverno policy |
+| ⚪ | `nexus-infra-registry` | Harbor private registry + Trivy scanning + cosign image signing |
 | 🟢 | [`local-data-stack`](https://github.com/grezap/local-data-stack) | Reproducible single-host Compose stack (Kafka KRaft, ClickHouse, Redis, OTel, Prometheus, Grafana, Jaeger, Seq). [v0.1.0 released](https://github.com/grezap/local-data-stack/releases/tag/v0.1.0). |
 
 ### Application projects
@@ -63,6 +74,7 @@ It targets four readers:
 | 11 | ⚪ | `nexus-platform` | Microservices | 6-service reference: gRPC + Kafka + REST, 2 sagas, K8s manifests |
 | 12 | ⚪ | `streamcore` | Vertical Slice | Kafka ecosystem showcase — Streams, ksqlDB, MirrorMaker 2 DR demo |
 | 13 | ⚪ | `nexus-desk` | Monorepo | 4 native Windows apps: WinForms, WPF, WinUI 3, WinUI3+WPF hybrid |
+| 14 | ⚪ | `lakehouse-core` | Medallion Lakehouse | Iceberg on MinIO (Bronze/Silver/Gold) + PySpark + dbt Core + Prefect + Trino federation |
 
 ## Highlights
 
