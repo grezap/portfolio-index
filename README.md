@@ -50,7 +50,7 @@ It targets four readers:
 |:---:|---|---|
 | ⚪ | `nexus-cli` | .NET 10 Native AOT CLI — single binary, controls the entire VM/Swarm/Nomad fleet |
 | ⚪ | `nexus-shared` | Shared .NET 10 libraries — OTel bootstrap, Vault client, Problem Details, Outbox helpers, auth primitives |
-| 🟡 | [`nexus-infra-vmware`](https://github.com/grezap/nexus-infra-vmware) | Packer templates + Terraform (vmware-desktop provider) for the 66-VM lab. [v0.1.0](https://github.com/grezap/nexus-infra-vmware/releases/tag/v0.1.0): scaffold + full `nexus-gateway` (VM #0, Debian 13 edge router) build path. |
+| 🟡 | [`nexus-infra-vmware`](https://github.com/grezap/nexus-infra-vmware) | Packer templates + Terraform (vmware-desktop provider) for the 66-VM lab. Shipped: 5 Packer templates (Debian 13, Ubuntu 24.04, Windows Server 2025 core/desktop, Windows 11 Enterprise) · `foundation` env (DC promotion + AD DS forest + domain-joined jumpbox + AD hardening) · `security` env (3-node HA Vault on Raft + internal PKI hierarchy + LDAPS auth/ldap + secrets/ldap AD password rotation). Phase 0.D.3 closed; Phase 0.D.4 (cred migration into Vault KV) starting. |
 | ⚪ | `nexus-infra-swarm-nomad` | Tier-2 orchestration — Docker Swarm (3+3) + Nomad + Consul + Vault with mTLS via Consul Connect |
 | ⚪ | `nexus-infra-k8s` | Tier-3 orchestration — kubeadm HA control plane, Cilium CNI, cert-manager, Argo CD, Kyverno policy |
 | ⚪ | `nexus-infra-registry` | Harbor private registry + Trivy scanning + cosign image signing |
