@@ -17,15 +17,15 @@
 
 ---
 
-> **📘 Canonical blueprint:** The complete end-to-end plan — 14 app projects, 5 infrastructure
-> repos, 30 enhancements, 12 build phases, 65-VM lab topology, 14 demo playbooks, and all
+> **📘 Canonical blueprint:** The complete end-to-end plan — 14 app projects, 6 infrastructure
+> repos, 30 enhancements, 12 build phases, 66-VM lab topology, 14 demo playbooks, and all
 > per-project schema designs — lives in **[`nexus-platform-plan`](https://github.com/grezap/nexus-platform-plan)**
 > (v0.1.0 Plan published). Start there for the architectural source of truth.
 
 ## What is NexusPlatform?
 
 NexusPlatform is a collection of **14 production-grade .NET application projects**,
-**5 infrastructure repositories**, and a **4-app native Windows suite**, engineered as
+**6 infrastructure repositories**, and a **4-app native Windows suite**, engineered as
 a single coherent portfolio. Every project is built to senior-engineering standards:
 correct architectural patterns, HA-capable infrastructure, full observability,
 automated tests, and documented runbooks.
