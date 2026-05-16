@@ -1,0 +1,19 @@
+// markdownlint-cli2 config for portfolio-index.
+//
+// Two rules disabled, both intentional choices in this docs-only repo:
+//   - MD013 (line-length): prose-style READMEs aren't 80-col; the
+//     "soft wrap at sentence boundary" style we use produces lines
+//     up to ~150 chars by design. Re-enabling forces ugly mid-sentence
+//     wraps that hurt diff readability without helping renderers.
+//   - MD033 (no-inline-html): the README uses <p align="center"> +
+//     <a href="..."> for the badge / quick-link block at the top.
+//     GitHub renders both fine; disabling allows the richer layout.
+//
+// All other default markdownlint rules stay ON -- still catch real
+// rendering issues (broken links, missing alt text, header skip-levels,
+// fenced-code-block language tags, etc.).
+{
+  "default": true,
+  "MD013": false,
+  "MD033": false
+}
