@@ -1,0 +1,48 @@
+name: ci
+
+# Minimal CI for portfolio-index: it's a docs-only repo (LICENSE +
+# PORTFOLIO.md + README.md). Two jobs:
+#   - gitleaks: secret scan -- even docs occasionally leak credentials
+#     (someone pasting a token into an example commit by mistake).
+#   - markdownlint: catches busted markdown rendering before it ships
+#     to the operator-facing public README.
+#
+# Added at 0.G.2 close-out 2026-05-17 -- this repo had been receiving
+# pushes since inception without any automated validation. Per
+# memory/feedback_post_push_ci_check.md: every push to a nexus-* repo
+# must be CI-green-verified before considering work done.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    name: gitleaks (secret scan)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so gitleaks can scan all commits on PRs
+      - name: gitleaks detect
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: "false"
+          GITLEAKS_ENABLE_SUMMARY: "true"
+
+  markdownlint:
+    name: markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          # Lint every .md in the repo. Use the action's default ruleset --
+          # add a .markdownlint.jsonc later if rules need customising.
+          globs: '**/*.md'
