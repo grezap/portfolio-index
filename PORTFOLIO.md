@@ -43,7 +43,7 @@ Rows are skills (grouped). Columns are project short-codes (see [README](./READM
 | SQL Server 2022 Always On | ○ | ● | · | · | · | · | · | · | · | ● | · | ● | · | ● |
 | Percona MySQL XtraDB + ProxySQL | · | · | ● | · | · | · | · | ● | · | · | · | ● | · | · |
 | PostgreSQL 16 + Patroni | · | · | · | ● | · | ● | · | · | ● | ● | · | ● | · | · |
-| MongoDB 7 Replica Set | · | · | · | · | ● | · | ● | · | · | · | ● | ● | · | · |
+| MongoDB 8 Replica Set | · | · | · | · | ● | · | ● | · | · | · | ● | ● | · | · |
 | Debezium CDC | · | ● | · | · | · | · | · | · | · | · | · | · | · | · |
 
 ## Data — Analytical
