@@ -40,7 +40,7 @@ Rows are skills (grouped). Columns are project short-codes (see [README](./READM
 
 | Skill | cli | dfs | tcore | sml | lmind | pnlp | vc | reco | cs | ql | fs | np | sc | desk |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| SQL Server 2022 Always On | ○ | ● | · | · | · | · | · | · | · | ● | · | ● | · | ● |
+| SQL Server 2025 Always On | ○ | ● | · | · | · | · | · | · | · | ● | · | ● | · | ● |
 | Percona MySQL XtraDB + ProxySQL | · | · | ● | · | · | · | · | ● | · | · | · | ● | · | · |
 | PostgreSQL 16 + Patroni | · | · | · | ● | · | ● | · | · | ● | ● | · | ● | · | · |
 | MongoDB 8 Replica Set | · | · | · | · | ● | · | ● | · | · | · | ● | ● | · | · |
