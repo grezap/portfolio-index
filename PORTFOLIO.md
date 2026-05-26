@@ -96,9 +96,9 @@ Rows are skills (grouped). Columns are project short-codes (see [README](./READM
 | Skill | cli | dfs | tcore | sml | lmind | pnlp | vc | reco | cs | ql | fs | np | sc | desk |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | OpenTelemetry .NET (traces + metrics + logs) | ◐ | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ◐ |
-| Prometheus + Grafana | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | · |
-| Jaeger (distributed tracing) | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | · |
-| Seq (structured logs) | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ○ |
+| Prometheus HA + Grafana HA (VIP) | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | · |
+| Tempo (distributed tracing on MinIO) | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | · |
+| Loki (structured logs on MinIO, LogQL) | · | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ○ |
 
 ## Frontend / Desktop
 
