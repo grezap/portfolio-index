@@ -18,8 +18,8 @@
 ---
 
 > **📘 Canonical blueprint:** The complete end-to-end plan — 14 app projects, 7 built
-> infrastructure repos, 30 enhancements, 12 build phases, a 107-VM + 5-VIP lab topology (built/cold-rebuild-proven through
-> Phase 0.I.5), 17 demo playbooks, and all per-project schema designs — lives in
+> infrastructure repos, 30 enhancements, 12 build phases, a 108-VM + 5-VIP lab topology (built/cold-rebuild-proven through
+> Phase 0.M), 19 demo playbooks, and all per-project schema designs — lives in
 > **[`nexus-platform-plan`](https://github.com/grezap/nexus-platform-plan)**
 > (v0.1.0 Plan published). Start there for the architectural source of truth.
 
