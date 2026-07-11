@@ -73,7 +73,7 @@ It targets four readers:
 | # | Status | Project | Architecture | One-line pitch |
 |---:|:---:|---|---|---|
 | 0 | ⚪ | `portfolio` | Clean Arch | This website — Blazor Server portfolio homepage |
-| 1 | ⚪ | `dataflow-studio` | Modular Monolith | SQL Server CDC → Kafka → StarRocks DWH + ClickHouse analytics |
+| 1 | 🟡 | `dataflow-studio` | Modular Monolith | SQL Server CDC → Kafka → StarRocks DWH + ClickHouse analytics |
 | 2 | ⚪ | `tenantcore` | Clean Arch | Multi-tenant SaaS on Percona MySQL XtraDB + ProxySQL |
 | 3 | ⚪ | `sentinelml` | Vertical Slice | Fraud + anomaly ML with automated drift-triggered retraining |
 | 4 | ⚪ | `localmind` | Clean Arch | Local LLM gateway — Semantic Kernel + Ollama + OpenAI-compatible API |
