@@ -73,7 +73,7 @@ It targets four readers:
 | # | Status | Project | Architecture | One-line pitch |
 |---:|:---:|---|---|---|
 | 0 | ⚪ | `portfolio` | Clean Arch | This website — Blazor Server portfolio homepage |
-| 1 | 🟡 | `dataflow-studio` | Modular Monolith | SQL Server CDC → Kafka → StarRocks DWH + ClickHouse analytics |
+| 1 | 🟡 | [`dataflow-studio`](https://github.com/grezap/dataflow-studio) | Modular Monolith | SQL Server CDC → Kafka → StarRocks DWH + ClickHouse analytics. **The pipeline runs end-to-end on the lab (2026-07-17):** OltpDb → SQL Server CDC → **Debezium** raw → a .NET curation worker → **curated Avro** (Schema Registry, 10 order-flow contracts from a data-driven catalog) → the **StarRocks Kimball star** — SCD2 `dim_customer`/`dim_product` + 4 facts, loaded idempotently. Schema migrations are FluentMigrator (OltpDb, reversible up→down→up gate) + **DbUp** (StarRocks/ClickHouse, apply→re-apply gates on throwaway containers — which caught 4 defects in the authored DDL before any lab write). Replay from zero: [`docs/handbook.md`](https://github.com/grezap/dataflow-studio/blob/main/docs/handbook.md). Remaining for `v0.1.0`: ClickHouse telemetry · Marquez/OTel · tests to 80% · Aspire + K8s. |
 | 2 | ⚪ | `tenantcore` | Clean Arch | Multi-tenant SaaS on Percona MySQL XtraDB + ProxySQL |
 | 3 | ⚪ | `sentinelml` | Vertical Slice | Fraud + anomaly ML with automated drift-triggered retraining |
 | 4 | ⚪ | `localmind` | Clean Arch | Local LLM gateway — Semantic Kernel + Ollama + OpenAI-compatible API |
